@@ -2,19 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-public class CircleScript : MonoBehaviour
+public class PlayerMovment : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private Rigidbody2D body;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-      
-    }
+    private void awake();
+    (
+        body.GeComponent<Rigidbody2D>(0, 0, 0);
+        )
+
 }
