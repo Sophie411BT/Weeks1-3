@@ -6,9 +6,9 @@ public class PlayerMovment : MonoBehaviour
 {
     private Rigidbody2D body;
 
-    private void awake();
-    (
-        body.GeComponent<Rigidbody2D>(0, 0, 0);
-        )
+    private void Awake()
+    {
+        body = GetComponent<Rigidbody2D>();
+    }
 
 }
