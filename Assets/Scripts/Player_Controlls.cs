@@ -6,7 +6,8 @@ using UnityEngine;
 
 public class MechanicalDrawing : MonoBehaviour
 {
-    //a private variable called body the references Rigidbody so that the code knows to im using it.
+   
+    //a private variable called body that references Rigidbody so that the code knows that im using Rigidbody2D.
     private Rigidbody2D body;
     //a public variable float called speed that i can reference whenever i need the speed of the player character.
     public float speed = 5;
@@ -23,7 +24,7 @@ public class MechanicalDrawing : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
@@ -33,10 +34,16 @@ public class MechanicalDrawing : MonoBehaviour
         Vector2 pos = transform.position;
 
         //use Input,Getaxis to allow the x and y values to be modified when keys are pressed.
+        //left and right arrow keys move the character from side to side
         pos.x += Input.GetAxis("Horizontal") * speed * Time.deltaTime;
 
+        //up and down arrow keys make the character move up and down
         pos.y += Input.GetAxis("Vertical") * speed * Time.deltaTime;
 
         transform.position = pos;
+
+        
+        
     }
+
 }
