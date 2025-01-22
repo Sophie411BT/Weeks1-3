@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Edges : MonoBehaviour
@@ -8,14 +9,15 @@ public class Edges : MonoBehaviour
     //create a private vector2 called bound to refer to the screen boundries
     private Vector2 bound;
     //craete variables for the width and height of the object
-    private float Width = 10;
-    private float Height = 4;
+    private float Width;
+    private float Height;
+  
     // Start is called before the first frame update
     void Start()
     {
-
+        
         //use x and y to find screen boundries in world sace. this way the code knows wher the boundries will be
-        bound = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
+        bound = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width - 115, Screen.height - 120, Camera.main.transform.position.z));
         Width = transform.GetComponent<SpriteRenderer>().bounds.size.x / 2;
         Height = transform.GetComponent<SpriteRenderer>().bounds.size.y / 2;
     }
