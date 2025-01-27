@@ -6,18 +6,10 @@ using UnityEngine;
 
 public class MechanicalDrawing : MonoBehaviour
 {
-   
-    //a private variable called body that references Rigidbody so that the code knows that im using Rigidbody2D.
-    private Rigidbody2D body;
+    
     //a public variable float called speed that i can reference whenever i need the speed of the player character.
     public float speed = 5;
-    
-
-    private void Awake()
-    {
-        //a statment telling the code to get the component Rigidbody2D whenever the variable body is called.
-        body = GetComponent<Rigidbody2D>();
-    }
+   
 
 
 
@@ -39,7 +31,7 @@ public class MechanicalDrawing : MonoBehaviour
 
         //up and down arrow keys make the character move up and down
         pos.y += Input.GetAxis("Vertical") * speed * Time.deltaTime;
-
+        // set transform position equel to pos variable
         transform.position = pos;
 
         
